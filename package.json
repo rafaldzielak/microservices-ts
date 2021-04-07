@@ -1,0 +1,48 @@
+{
+  "name": "microservice-typescript-task",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/albacross/microservice-typescript-task.git",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "12"
+  },
+  "scripts": {
+    "dev": "tsc && concurrently \"nodemon dist/index.js\" \"tsc -w --project tsconfig.json\"",
+    "build": "tsc --outDir dist --project tsconfig.json",
+    "start": "docker-compose up",
+    "lint": "eslint src --ext ts,js",
+    "test": "TZ=UTC jest ."
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.11",
+    "@types/jest": "^26.0.22",
+    "@types/supertest": "^2.0.11",
+    "@types/validator": "^13.1.3",
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
+    "concurrently": "^6.0.1",
+    "eslint": "^7.23.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "faker": "^5.5.2",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.7",
+    "sequelize-cli": "^6.2.0",
+    "sqlite3": "^5.0.2",
+    "supertest": "^6.1.3",
+    "ts-jest": "^26.5.4",
+    "typescript": "^4.2.3"
+  }
+}
