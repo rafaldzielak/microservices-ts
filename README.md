@@ -5,16 +5,29 @@ The goal to of this project is to do the following:
 1. Check why the test is failing and fix what's necessary
 
 
-2. Add an endpoint to find user using any of its text-based properties, e.g. if someone searches for `'joh'` it'll return user
-   `{ firstName: 'John', lastName: 'Wick', email: 'john.wick@gmail.com' }`
-
-
-3. Add an endpoint that creates a `Lead` object that belongs to a user, here's an example of the `Lead` object:
+2. Add an endpoint that creates a `Lead` object that belongs to a user, here's an example of the `Lead` object:
 ```json
 {
   "name": "Albacross",
   "domain": "albacross.com",
   "lastVisit": "2020-02-11 21:37:00"
+}
+```
+
+
+3. Add an endpoint to find user using any of its text-based properties with his Leads included, e.g. if someone searches for `'joh'` it'll return user
+```json
+{
+  "firstName": "John",
+  "lastName": "Wick",
+  "email": "john.wick@gmail.com",
+  "leads": [
+    {
+      "name": "Albacross",
+      "domain": "albacross.com",
+      "lastVisit": "2020-02-11 21:37:00"
+    }
+  ]
 }
 ```
 
