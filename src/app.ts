@@ -1,13 +1,17 @@
-import express from 'express'
-import setupRoutes from './routes'
+import express from "express";
+import Lead from "./db/models/lead";
+import User from "./db/models/user";
+import setupRoutes from "./routes";
 
-const app = express()
+const app = express();
 
-app.use(express.json())
+app.use(express.json());
+Lead.belongsTo(User);
+User.hasMany(Lead);
 
-const router = express.Router()
-setupRoutes(router)
+const router = express.Router();
+setupRoutes(router);
 
-app.use('/', router)
+app.use("/", router);
 
-export default app
+export default app;

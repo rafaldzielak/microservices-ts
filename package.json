@@ -4,15 +4,12 @@
   "main": "index.js",
   "repository": "https://github.com/albacross/microservice-typescript-task.git",
   "license": "UNLICENSED",
-  "engines": {
-    "node": "12"
-  },
   "scripts": {
     "dev": "tsc && concurrently \"nodemon dist/index.js\" \"tsc -w --project tsconfig.json\"",
     "build": "tsc --outDir dist --project tsconfig.json",
     "start": "docker compose up",
     "lint": "eslint src --ext ts,js",
-    "test": "TZ=UTC jest ."
+    "test": "jest ."
   },
   "dependencies": {
     "cors": "^2.8.5",
